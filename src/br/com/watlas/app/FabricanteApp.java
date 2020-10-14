@@ -15,14 +15,10 @@ import br.com.watlas.model.Fabricante;
 
 import java.awt.Color;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.regex.PatternSyntaxException;
-import javax.swing.JOptionPane;
-import javax.swing.RowFilter;
+
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
+
 
 public class FabricanteApp extends javax.swing.JDialog {
 

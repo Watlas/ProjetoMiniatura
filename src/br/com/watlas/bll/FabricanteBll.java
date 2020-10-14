@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  * @author watla
  */
 public class FabricanteBll {
-
+    String oi;
     private FabricanteDal dal;
 
     public FabricanteBll() throws Exception {

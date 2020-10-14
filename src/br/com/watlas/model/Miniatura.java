@@ -116,22 +116,4 @@ public class Miniatura {
     public Miniatura() {
     }
 
-//    
-//    
-//    public void vai(){
-//        fotos = new ArrayList<>();
-//        Foto fotinha = new Foto();
-//        fotinha.setFoto_iden(1);
-//        fotinha.setFoto_caminho("c:\\imagem.jpg");
-//        fotinha.setFoto_descricao("fotinha da miniatura");
-//        fotinha.setMiniatura(this);
-//        fotos.add(fotinha);
-//        String sql;
-//        
-//        sql = "SELECT * FROM miniaturas WHERE min_modelo = ? AND min_ano = ?";
-//        
-//        sql = "INSERT INTO fotos (fot_iden,   fot_caminho,                      fot_descricao,                    fot_min_iden) VALUES("
-//                                       + "DEFAULT,"+ fotinha.getFoto_caminho() + ", "+ fotinha.getFoto_descricao() +", "+ fotinha.getMiniatura().getMin_iden()+ ")";
-//    }
-
 }
