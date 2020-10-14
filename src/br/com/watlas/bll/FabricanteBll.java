@@ -7,12 +7,13 @@ package br.com.watlas.bll;
 
 import br.com.watlas.dal.FabricanteDal;
 import br.com.watlas.model.Fabricante;
+
 import static java.nio.file.Files.list;
+
 import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author watla
  */
 public class FabricanteBll {
@@ -58,7 +59,7 @@ public class FabricanteBll {
             dal.deleteFabricante(fab);
 
         } catch (Exception e) {
-               String mensagem = e.getMessage();
+            String mensagem = e.getMessage();
             if (mensagem.contains("update")) {
                 mensagem = "EXISTE UMA MINIATURA COM ESSA FABRICA CADASTRADA";
             }
@@ -88,10 +89,10 @@ public class FabricanteBll {
             return dal.getallFabricante();
 
         } catch (Exception e) {
-          throw new Exception(e);
+            throw new Exception(e);
 
         }
-       
+
     }
 
     public Fabricante getFabricantebyId(int fab) throws Exception {
@@ -99,10 +100,10 @@ public class FabricanteBll {
             return dal.getFabricantebyId(fab);
 
         } catch (Exception e) {
-          throw new Exception(e);
+            throw new Exception(e);
 
         }
-        
+
     }
 
     public Fabricante getFabricantebyNome(String nome) throws Exception {
@@ -110,10 +111,10 @@ public class FabricanteBll {
             return dal.getFabricantebyNome(nome);
 
         } catch (Exception e) {
-           throw new Exception(e);
+            throw new Exception(e);
 
         }
-   
+
     }
 
     public List<Fabricante> getallFabricanteAlfa() throws Exception {
@@ -124,7 +125,7 @@ public class FabricanteBll {
             throw new Exception(e);
 
         }
-       
+
     }
 
 }

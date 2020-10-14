@@ -6,7 +6,6 @@
 package br.com.watlas.model;
 
 /**
- *
  * @author watla
  */
 public class Foto {
@@ -46,6 +45,6 @@ public class Foto {
     public void setMiniatura(Miniatura miniatura) {
         this.miniatura = miniatura;
     }
-    
-   
+
+
 }

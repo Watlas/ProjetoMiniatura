@@ -9,6 +9,7 @@ import br.com.watlas.model.Foto;
 import br.com.watlas.model.Miniatura;
 import br.com.watlas.model.Tipo_Miniatura;
 import br.com.watlas.util.ConexaoDal;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +19,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author watla //
  */
 public class FotoDal {
@@ -39,7 +39,7 @@ public class FotoDal {
             preparedStatement.setInt(3, objeto.getMiniatura().getMin_iden());
             preparedStatement.execute();
         } catch (Exception e) {
-             throw e;
+            throw e;
         }
 
     }
@@ -52,7 +52,7 @@ public class FotoDal {
             preparedStatement.executeUpdate();
 
         } catch (Exception e) {
-             throw e;
+            throw e;
         }
     }
 
@@ -67,7 +67,7 @@ public class FotoDal {
             preparedStatement.executeUpdate();
 
         } catch (Exception e) {
-             throw e;
+            throw e;
 
         }
     }
@@ -91,7 +91,7 @@ public class FotoDal {
                 retorno.add(foto);
             }
         } catch (Exception e) {
-              throw e;
+            throw e;
         }
         return retorno;
     }

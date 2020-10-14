@@ -7,8 +7,11 @@ package br.com.watlas.dal;
 
 import br.com.watlas.model.Tema;
 import br.com.watlas.model.Tipo_Miniatura;
+
 import java.sql.Connection;
+
 import br.com.watlas.util.ConexaoDal;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -17,7 +20,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author watla
  */
 public class TemaDal {

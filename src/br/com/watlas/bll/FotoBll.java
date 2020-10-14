@@ -8,11 +8,11 @@ package br.com.watlas.bll;
 import br.com.watlas.dal.FotoDal;
 import br.com.watlas.model.Foto;
 import br.com.watlas.model.Miniatura;
+
 import java.util.List;
 
 
 /**
- *
  * @author watla
  */
 public class FotoBll {
@@ -50,7 +50,7 @@ public class FotoBll {
         try {
             dal.deleteFoto(fotoId);
         } catch (Exception e) {
-               String mensagem = e.getMessage();
+            String mensagem = e.getMessage();
             if (mensagem.contains("update")) {
                 mensagem = "EXISTE UMA MINIATURA COM ESSA FOTO CADASTRADA";
             }
@@ -68,20 +68,22 @@ public class FotoBll {
 
         }
     }
-     public List<Foto> getallFotos(Miniatura miniatura) throws Exception  {
-         try {
-             return dal.getallFotos(miniatura);
-         } catch (Exception e) {
-             throw e;
-         }
-    
-     }
-      public Foto getTipoFotosById(int fotoId) throws Exception {
-          try {
-              return dal.getTipoFotosById(fotoId);
-          } catch (Exception e) {
-              throw e;
-          }
-      }
+
+    public List<Foto> getallFotos(Miniatura miniatura) throws Exception {
+        try {
+            return dal.getallFotos(miniatura);
+        } catch (Exception e) {
+            throw e;
+        }
+
+    }
+
+    public Foto getTipoFotosById(int fotoId) throws Exception {
+        try {
+            return dal.getTipoFotosById(fotoId);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 
 }

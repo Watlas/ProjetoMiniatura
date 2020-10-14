@@ -9,7 +9,6 @@ package br.com.watlas.model;
 import java.util.List;
 
 /**
- *
  * @author watla
  */
 public class Miniatura {
@@ -23,7 +22,7 @@ public class Miniatura {
     private Fabricante fabricante;
     private Tipo_Miniatura tipo_miniatura;
     private Tema tema;
-    private List<Foto> fotos; 
+    private List<Foto> fotos;
 
     public int getMin_iden() {
         return min_iden;
@@ -112,8 +111,7 @@ public class Miniatura {
     public void setFotos(List<Foto> fotos) {
         this.fotos = fotos;
     }
-    
-    
+
 
     public Miniatura() {
     }
@@ -135,5 +133,5 @@ public class Miniatura {
 //        sql = "INSERT INTO fotos (fot_iden,   fot_caminho,                      fot_descricao,                    fot_min_iden) VALUES("
 //                                       + "DEFAULT,"+ fotinha.getFoto_caminho() + ", "+ fotinha.getFoto_descricao() +", "+ fotinha.getMiniatura().getMin_iden()+ ")";
 //    }
-    
+
 }

@@ -7,11 +7,11 @@ package br.com.watlas.bll;
 
 import br.com.watlas.dal.MiniaturaDal;
 import br.com.watlas.model.Miniatura;
+
 import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author watla
  */
 public class MiniaturaBll {

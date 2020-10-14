@@ -6,7 +6,6 @@
 package br.com.watlas.model;
 
 /**
- *
  * @author watla
  */
 public class Tema {
@@ -31,6 +30,6 @@ public class Tema {
     public void setTema_nome(String tema_nome) {
         this.tema_nome = tema_nome;
     }
-    
-    
+
+
 }

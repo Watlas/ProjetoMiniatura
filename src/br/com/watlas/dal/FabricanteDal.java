@@ -8,6 +8,7 @@ package br.com.watlas.dal;
 import br.com.watlas.model.Fabricante;
 import br.com.watlas.model.Tema;
 import br.com.watlas.util.ConexaoDal;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +18,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author watla
  */
 public class FabricanteDal {
@@ -50,7 +50,7 @@ public class FabricanteDal {
             preparedStatement.executeUpdate();
 
         } catch (Exception e) {
-                throw e;
+            throw e;
         }
     }
 
@@ -81,7 +81,7 @@ public class FabricanteDal {
             }
 
         } catch (Exception e) {
-               throw e;
+            throw e;
         }
         return lista;
     }
@@ -100,7 +100,7 @@ public class FabricanteDal {
 
             }
         } catch (Exception e) {
-                throw e;
+            throw e;
         }
         return fab;
     }
@@ -119,7 +119,7 @@ public class FabricanteDal {
 
             }
         } catch (Exception e) {
-               throw e;
+            throw e;
         }
         return fab;
     }
@@ -146,7 +146,7 @@ public class FabricanteDal {
                 }
             }
         } catch (Exception e) {
-                throw e;
+            throw e;
         }
         return lista;
     }

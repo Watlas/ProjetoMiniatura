@@ -11,6 +11,7 @@ import br.com.watlas.model.Miniatura;
 import br.com.watlas.model.Tema;
 import br.com.watlas.model.Tipo_Miniatura;
 import br.com.watlas.util.ConexaoDal;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,7 +21,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author watla
  */
 public class MiniaturaDal {
@@ -62,7 +62,7 @@ public class MiniaturaDal {
             preparedStatement.executeUpdate();
 
         } catch (Exception e) {
-              throw e;
+            throw e;
         }
     }
 
@@ -83,7 +83,7 @@ public class MiniaturaDal {
             preparedStatement.setInt(10, objeto.getMin_iden());
             preparedStatement.executeUpdate();
         } catch (Exception e) {
-             throw e;
+            throw e;
 
         }
     }
@@ -122,7 +122,7 @@ public class MiniaturaDal {
 
             }
         } catch (Exception e) {
-             throw e;
+            throw e;
 
         }
 
@@ -170,7 +170,7 @@ public class MiniaturaDal {
 
         } catch (Exception e) {
 
-          throw e;
+            throw e;
         }
         return miniatura;
     }

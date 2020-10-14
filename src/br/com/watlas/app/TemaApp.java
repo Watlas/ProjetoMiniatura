@@ -8,6 +8,7 @@ package br.com.watlas.app;
 import br.com.watlas.bll.TemaBll;
 
 import br.com.watlas.model.Tema;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -20,7 +21,6 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
 /**
- *
  * @author watla
  */
 public class TemaApp extends javax.swing.JDialog {
@@ -31,7 +31,7 @@ public class TemaApp extends javax.swing.JDialog {
 
     private TemaBll bll;
     private Tema tema;
-    
+
 
     private void atualizarGrid() throws Exception {
         DefaultTableModel model = (DefaultTableModel) jTableTemas.getModel();
@@ -41,13 +41,14 @@ public class TemaApp extends javax.swing.JDialog {
         List<Tema> temas = bll.getallTemas();
         for (Tema tema : temas) {
             linha = new Object[]{
-                tema.getTema_iden(),
-                tema.getTema_nome()
+                    tema.getTema_iden(),
+                    tema.getTema_nome()
             };
             model.addRow(linha);
 
         }
     }
+
     private void atualizarGridalfa() throws Exception {
         DefaultTableModel model = (DefaultTableModel) jTableTemas.getModel();
         model.setRowCount(0);
@@ -56,8 +57,8 @@ public class TemaApp extends javax.swing.JDialog {
         List<Tema> temas = bll.getallTemasAfabetic();
         for (Tema tema : temas) {
             linha = new Object[]{
-                tema.getTema_iden(),
-                tema.getTema_nome()
+                    tema.getTema_iden(),
+                    tema.getTema_nome()
             };
             model.addRow(linha);
 
@@ -70,7 +71,7 @@ public class TemaApp extends javax.swing.JDialog {
         initComponents();
 
         try {
-        
+
             bll = new TemaBll();
             tema = new Tema();
         } catch (Exception ex) {
@@ -124,12 +125,12 @@ public class TemaApp extends javax.swing.JDialog {
         });
 
         jTableTemas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][]{
 
-            },
-            new String [] {
-                "ID", "NOME"
-            }
+                },
+                new String[]{
+                        "ID", "NOME"
+                }
         ));
         jTableTemas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -152,46 +153,46 @@ public class TemaApp extends javax.swing.JDialog {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextFieldNomeTema)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonUpdate)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonDelete)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonIncluir))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(148, 148, 148)
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jTextFieldNomeTema)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jButton1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jButtonUpdate)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jButtonDelete)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButtonIncluir))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel1)
+                                                .addGap(148, 148, 148)
+                                                .addComponent(jLabel2)
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addComponent(jLabel2))
-                .addGap(6, 6, 6)
-                .addComponent(jTextFieldNomeTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonIncluir)
-                    .addComponent(jButtonDelete)
-                    .addComponent(jButtonUpdate)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                .addContainerGap())
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jLabel1))
+                                        .addComponent(jLabel2))
+                                .addGap(6, 6, 6)
+                                .addComponent(jTextFieldNomeTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButtonIncluir)
+                                        .addComponent(jButtonDelete)
+                                        .addComponent(jButtonUpdate)
+                                        .addComponent(jButton1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                                .addContainerGap())
         );
 
         pack();
@@ -199,7 +200,7 @@ public class TemaApp extends javax.swing.JDialog {
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
         try {
-           
+
             int id = Integer.parseInt(jTableTemas.getValueAt(jTableTemas.getSelectedRow(), 0).toString());
             tema.setTema_iden(id);
             tema.setTema_nome(jTextFieldNomeTema.getText());
@@ -229,7 +230,7 @@ public class TemaApp extends javax.swing.JDialog {
 
     private void jButtonIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIncluirActionPerformed
         try {
-            
+
             tema.setTema_nome(jTextFieldNomeTema.getText().toLowerCase());
             bll.addTema(tema);
 
@@ -254,7 +255,7 @@ public class TemaApp extends javax.swing.JDialog {
         try {
             atualizarGridalfa();
         } catch (Exception ex) {
-           JOptionPane.showMessageDialog(this, ex.getMessage());
+            JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -265,7 +266,7 @@ public class TemaApp extends javax.swing.JDialog {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

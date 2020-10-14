@@ -7,10 +7,10 @@ package br.com.watlas.bll;
 
 import br.com.watlas.dal.TemaDal;
 import br.com.watlas.model.Tema;
+
 import java.util.List;
 
 /**
- *
  * @author watla
  */
 public class TemaBll {

@@ -6,7 +6,6 @@
 package br.com.watlas.model;
 
 /**
- *
  * @author watla
  */
 public class Tipo_Miniatura {

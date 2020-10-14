@@ -10,28 +10,27 @@ import java.sql.DriverManager;
 
 
 /**
- *
  * @author watla
  */
 public class ConexaoDal {
     private static Connection connection = null;
     private static ConexaoDal conexao = null;
-    
-    private ConexaoDal() throws Exception{
-        
+
+    private ConexaoDal() throws Exception {
+
         String driver = "org.postgresql.Driver";
         String url = "jdbc:postgresql://192.168.0.111:5432/Projeto_Miniatura";
         String user = "postgres";
         String password = "171717";
-        
+
         Class.forName(driver);
         connection = DriverManager.getConnection(url, user, password);
-        
+
     }
-    
-    public static Connection getConexao()throws Exception{
+
+    public static Connection getConexao() throws Exception {
         try {
-            if(conexao ==null){
+            if (conexao == null) {
                 conexao = new ConexaoDal();
             }
             return connection;
@@ -39,6 +38,6 @@ public class ConexaoDal {
             throw e;
         }
     }
-    
-    
+
+
 }

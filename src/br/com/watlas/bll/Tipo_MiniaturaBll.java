@@ -2,6 +2,7 @@ package br.com.watlas.bll;
 
 import br.com.watlas.dal.Tipo_MiniaturaDal;
 import br.com.watlas.model.Tipo_Miniatura;
+
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -10,8 +11,8 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author watla
  */
 public class Tipo_MiniaturaBll {
@@ -21,12 +22,12 @@ public class Tipo_MiniaturaBll {
     public Tipo_MiniaturaBll() throws Exception {
         tipoDal = new Tipo_MiniaturaDal();
     }
-    
+
 
     public void validarNome(Tipo_Miniatura miniatura) throws Exception {
         String nome = miniatura.getTipo_miniatura().trim().toLowerCase();
         String invalidos = "1234567890'\"!@#$%¨&*()-_+={[}]/?><;:";
-      
+
         for (int i = 0; i < invalidos.length(); i++) {
             if (nome.contains("" + invalidos.charAt(i))) {
                 throw new Exception("Nome do tipo de miniatura inválido!");
